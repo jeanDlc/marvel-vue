@@ -1,24 +1,7 @@
 # marvel
 
-## Project setup
-```
-npm install
-```
+Its an applications where you can see all your marvel's superheroes
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Project powered by Vue.js
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

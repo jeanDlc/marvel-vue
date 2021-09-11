@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <Hero />
+  <main></main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import api from "@/config/api";
+import Hero from "@/components/Hero.vue";
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    Hero,
+  },
+  created() {
+    fetch(
+      `https://gateway.marvel.com:443/v1/public/characters?ts=${api.ts}&apikey=${api.pubKey}&hash=${api.hash}`
+    )
+      .then((data) => data.json())
+      .then((res) => console.log(res.data?.results));
   },
 };
 </script>
