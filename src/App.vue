@@ -4,6 +4,7 @@
 </template>
 <script>
 import Heading from "./components/Heading.vue";
+
 export default {
   components: {
     Heading,
@@ -16,7 +17,7 @@ export default {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #413c3c;
 }
 html {
