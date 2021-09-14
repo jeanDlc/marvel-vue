@@ -1,7 +1,11 @@
 <template>
   <Hero />
   <main class="container">
-    <h2 class="title">Featured characters</h2>
+    <div class="main-header">
+      <h2 class="title">Featured characters</h2>
+      <Searcher placeholder="Ex. Hulk" />
+    </div>
+
     <ListHeroes />
   </main>
 </template>
@@ -9,11 +13,13 @@
 <script>
 import Hero from "@/components/Hero.vue";
 import ListHeroes from "@/components/heroes/List.vue";
+import Searcher from "../components/Searcher.vue";
 export default {
   name: "Home",
   components: {
     Hero,
     ListHeroes,
+    Searcher,
   },
 };
 </script>
@@ -36,5 +42,16 @@ export default {
   bottom: -12px;
   left: 0;
   position: absolute;
+}
+.main-header {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .main-header {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
