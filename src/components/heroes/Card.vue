@@ -23,9 +23,6 @@ export default {
 </script>
 <style scoped>
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   background-color: #151515;
   position: relative;
@@ -46,6 +43,21 @@ export default {
   transform: translate3d(0, 50%, 0);
   -webkit-transform: translate3d(0, 50%, 0);
 }
+.card::after {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: white;
+  border-style: solid;
+  border-width: 12px 12px 0 0;
+
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: auto;
+  z-index: 4;
+}
 .card-thumb {
   height: 350px;
   overflow: hidden;
@@ -60,7 +72,7 @@ export default {
   transition: transform 0.3s ease-out;
 }
 .card:hover .card-thumb img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 .card-body {
   padding: 15px;
