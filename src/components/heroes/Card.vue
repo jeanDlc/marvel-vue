@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <img class="image-hero" :src="imgSrc" alt="hero image" />
+    <img class="image-hero red-layer" :src="imgSrc" alt="hero image" />
     <section class="text-container">
       <h2 class="name">{{ name }}</h2>
     </section>
@@ -24,13 +24,19 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: #151515;
 }
+
 .text-container {
-  padding: 10px;
+  padding: 15px;
+
+  color: white;
 }
 .name {
-  font-size: 25px;
+  font-size: 20px;
   margin: 5px 0;
+  font-weight: 400;
 }
 .image-hero {
   width: 100%;
@@ -38,6 +44,7 @@ export default {
   height: 350px;
   object-fit: cover;
 }
+
 .button-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

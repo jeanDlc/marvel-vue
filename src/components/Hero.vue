@@ -16,6 +16,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 section {
   height: 90vh;
