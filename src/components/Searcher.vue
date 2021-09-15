@@ -17,11 +17,14 @@ export default {
     placeholder: String,
     withLabel: Boolean,
     labelText: String,
+    onSubmit: Function,
   },
   methods: {
     handleSubmit(e) {
       e.preventDefault();
-      console.log("search");
+      const q = this.query.trim();
+      this.onSubmit(q);
+      this.query = "";
     },
   },
 };
@@ -45,21 +48,7 @@ input:focus {
 .searcher {
   position: relative;
 }
-/*
-.searcher::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  bottom: 0;
-  top: 0;
-  right: 20px;
-  position: absolute;
-  background-image: url("../assets/icons/search.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  
-}
-*/
+
 .searcher::before {
   content: url("../assets/icons/search.svg");
   padding: 0 15px 0 0;

@@ -3,7 +3,7 @@
   <main class="container">
     <div class="main-header">
       <h2 class="title">Featured characters</h2>
-      <Searcher placeholder="Ex. Hulk" />
+      <Searcher placeholder="Ex. Hulk" :onSubmit="searchHeroes" />
     </div>
 
     <ListHeroes />
@@ -14,6 +14,7 @@
 import Hero from "@/components/Hero.vue";
 import ListHeroes from "@/components/heroes/List.vue";
 import Searcher from "../components/Searcher.vue";
+import { mapMutations } from "vuex";
 export default {
   name: "Home",
   components: {
@@ -21,12 +22,15 @@ export default {
     ListHeroes,
     Searcher,
   },
+  methods: {
+    ...mapMutations(["searchHeroes"]),
+  },
 };
 </script>
 <style scoped>
 .container {
   max-width: 1200px;
-  margin: 1rem auto;
+  margin: 1rem auto 5rem auto;
   width: 90%;
 }
 .title {
@@ -53,5 +57,14 @@ export default {
   .main-header {
     grid-template-columns: 1fr 1fr;
   }
+}
+.btn-reset {
+  background-color: var(--dark);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  padding: 1rem 1rem;
+  min-width: 10rem;
+  cursor: pointer;
 }
 </style>
