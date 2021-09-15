@@ -37,5 +37,7 @@ export default {
 .title {
   font-size: 2.5rem;
   text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 3.5rem;
 }
 </style>

@@ -26,6 +26,7 @@ export default {
   display: grid;
   gap: 1rem;
   margin: 1.5rem 0;
+  row-gap: 3rem;
 }
 @media (min-width: 449px) {
   .list {

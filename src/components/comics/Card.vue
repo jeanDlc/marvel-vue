@@ -7,6 +7,7 @@
       <h3 class="card-title">{{ title }}</h3>
       <div class="card-subs">
         <p>{{ numCreators || "No" }} creators</p>
+        <span>|</span>
         <p>{{ pageCount || "No" }} Pages</p>
       </div>
     </div>
@@ -28,56 +29,37 @@ img {
   max-width: 100%;
 }
 .card {
-  max-width: 100%;
-  box-shadow: 4px 4px 4px -4px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 4px 4px 4px -4px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 4px 4px 4px -4px rgba(0, 0, 0, 0.35);
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: box-shadow 0.3s ease-out;
 }
 .card-thumb {
-  height: 24rem;
+  height: 25rem;
   overflow: hidden;
-}
-.card-thumb img {
+  box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
   transition: transform 0.3s ease-out;
 }
+.card:hover .card-thumb {
+  transform: translateY(-0.6rem);
+}
 .card-body {
-  padding: 1.5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
+  margin-top: 1.7rem;
+  padding: 0 0.5rem;
 }
-
 .card-title {
-  font-size: 1.2rem;
-  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  color: var(--dark);
+  margin: 0;
+  font-weight: 700;
 }
-
+.card:hover .card-title {
+  color: var(--red);
+}
 .card-subs {
   display: flex;
-  text-align: center;
-  justify-content: space-between;
-  transition: color 0.3s ease-out;
-  color: #9b9b9b;
-}
-.card:hover .card-subs {
-  color: #808080;
+  font-size: 0.8rem;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 .card-subs p {
   margin: 0;
-}
-
-.card:hover {
-  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.35);
-}
-.card:hover .card-thumb img {
-  transform: scale(1.05);
 }
 </style>
