@@ -38,4 +38,9 @@ html {
   color: white;
   background: var(--red);
 }
+.container {
+  max-width: 1200px;
+  width: 98%;
+  margin: 0 auto;
+}
 </style>
