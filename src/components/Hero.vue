@@ -41,10 +41,13 @@ section {
   -moz-box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.5);
 }
 .welcome {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgb(228, 228, 228);
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  padding-top: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -53,6 +56,7 @@ section {
   text-transform: capitalize;
   font-size: 30px;
   line-height: 1.4;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
