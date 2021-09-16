@@ -50,28 +50,33 @@ section {
   justify-content: center;
   padding-left: 20px;
   padding-right: 20px;
+  text-transform: uppercase;
 }
+
 .title {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  text-transform: capitalize;
-  font-size: 30px;
+  color: rgb(228, 228, 228);
+  font-family: var(--secondaryFont);
+
+  font-size: 2rem;
+
   line-height: 1.4;
   margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
   .title {
-    font-size: 50px;
+    font-size: 2rem;
   }
 }
 .text {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 35px;
-  font-size: 18px;
+  font-size: 0.8rem;
 }
 @media (min-width: 768px) {
   .text {
-    font-size: 20px;
+    font-size: 1rem;
   }
 }
 .vue {

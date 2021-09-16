@@ -86,5 +86,6 @@ export default {
   margin: 5px 0;
   font-weight: 400;
   text-transform: uppercase;
+  color: white;
 }
 </style>

@@ -56,10 +56,11 @@ export default {
   width: 90%;
 }
 .title {
-  font-size: 30px;
+  font-size: 1.8rem;
+
   position: relative;
   margin-bottom: 2rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 .title::after {
   content: "";

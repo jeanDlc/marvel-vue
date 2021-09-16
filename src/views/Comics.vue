@@ -66,9 +66,8 @@ export default {
 </script>
 <style scoped>
 .title {
-  font-size: 2.5rem;
-  text-transform: capitalize;
-  font-weight: 500;
+  font-size: 2rem;
+
   margin-bottom: 3.5rem;
 }
 .btn {

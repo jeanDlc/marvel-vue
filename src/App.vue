@@ -13,12 +13,24 @@ export default {
 </script>
 
 <style>
+:root {
+  --principalFont: "Roboto Condensed", sans-serif;
+  --secondaryFont: "Roboto", sans-serif;
+  --gray: #202020;
+  --red: #e62429;
+  --dark: #151515;
+}
 #app {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--secondaryFont);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color: #413c3c;
+  color: var(--gray);
+}
+h1,
+h2 {
+  font-family: var(--principalFont);
+  text-transform: uppercase;
 }
 html {
   box-sizing: border-box;
